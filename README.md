@@ -1,0 +1,116 @@
+📊 Data Cleaning & Analysis Tool (Python)
+
+A beginner-friendly Python project that automatically cleans CSV files by removing duplicate rows, handling missing values, and generating summary statistics.
+This tool is perfect for students, data analysts, and anyone working with raw CSV datasets.
+
+🌟 Features
+
+✔ Accepts any CSV file
+
+✔ Removes duplicate entries
+
+✔ Removes rows with missing values
+
+✔ Generates summary statistics
+
+✔ Saves cleaned data as cleaned_data.csv
+
+✔ Creates a text report: summary_report.txt
+
+✔ Lightweight and beginner-friendly
+
+🛠 Technologies Used
+
+Python 3
+
+Pandas
+
+📂 Project Structure
+.
+├── main.py
+├── sample_data.csv
+├── cleaned_data.csv
+├── summary_report.txt
+└── README.md
+
+⚙️ Installation
+
+Install Pandas using pip:
+
+pip install pandas
+
+▶️ How to Run
+
+Run the script from the terminal inside the project folder:
+
+python main.py
+
+
+You will see:
+
+Enter your CSV file name or full path:
+
+
+Type the name of your CSV file, for example:
+
+sample_data.csv
+
+📄 Output Files
+1️⃣ cleaned_data.csv
+
+Cleaned version of your input
+
+No duplicates
+
+No missing values
+
+2️⃣ summary_report.txt
+
+Contains summary statistics like:
+
+Count
+
+Mean
+
+Standard deviation
+
+Min/Max
+
+Unique categories
+
+🧪 Example Input (sample_data.csv)
+Name,Age,City,Salary
+Amit,23,Delhi,50000
+Rahul,25,Mumbai,60000
+Priya,22,Bangalore,55000
+Amit,23,Delhi,50000
+Sara,,Hyderabad,62000
+Mohan,29,Chennai,58000
+
+🧠 Sample Summary Report Output
+Summary Statistics:
+          Age    Salary
+count     4        4
+mean     24.75   55750
+min      22      50000
+max      29      60000
+std       ...
+
+
+(Exact values depend on data.)
+
+📌 Use Cases
+
+This tool is useful for:
+
+Students learning Python
+
+Data cleaning practice
+
+Quick preprocessing of CSV files
+
+Data analysis assignments
+
+👤 Author
+
+Mohammad Inthiyaz
