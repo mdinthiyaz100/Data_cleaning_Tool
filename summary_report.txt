@@ -1,0 +1,15 @@
+Summary Statistics:
+        gender race/ethnicity parental level of education  ...  math score reading score  writing score
+count     1000           1000                        1000  ...  1000.00000   1000.000000    1000.000000
+unique       2              5                           6  ...         NaN           NaN            NaN
+top     female        group C                some college  ...         NaN           NaN            NaN
+freq       518            319                         226  ...         NaN           NaN            NaN
+mean       NaN            NaN                         NaN  ...    66.08900     69.169000      68.054000
+std        NaN            NaN                         NaN  ...    15.16308     14.600192      15.195657
+min        NaN            NaN                         NaN  ...     0.00000     17.000000      10.000000
+25%        NaN            NaN                         NaN  ...    57.00000     59.000000      57.750000
+50%        NaN            NaN                         NaN  ...    66.00000     70.000000      69.000000
+75%        NaN            NaN                         NaN  ...    77.00000     79.000000      79.000000
+max        NaN            NaN                         NaN  ...   100.00000    100.000000     100.000000
+
+[11 rows x 8 columns]
