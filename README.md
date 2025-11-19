@@ -78,27 +78,6 @@ Min/Max
 
 Unique categories
 
-🧪 Example Input (sample_data.csv)
-Name,Age,City,Salary
-Amit,23,Delhi,50000
-Rahul,25,Mumbai,60000
-Priya,22,Bangalore,55000
-Amit,23,Delhi,50000
-Sara,,Hyderabad,62000
-Mohan,29,Chennai,58000
-
-🧠 Sample Summary Report Output
-Summary Statistics:
-          Age    Salary
-count     4        4
-mean     24.75   55750
-min      22      50000
-max      29      60000
-std       ...
-
-
-(Exact values depend on data.)
-
 📌 Use Cases
 
 This tool is useful for:
