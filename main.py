@@ -1,4 +1,6 @@
 import pandas as pd
+from fastapi import FastAPI, UploadFile, File
+
 import os
 app = FastAPI()
 
@@ -38,4 +40,5 @@ def clean_data(input_file, output_file="cleaned_data.csv"):
 if __name__ == "__main__":
     user_file = input("Enter your CSV file name or full path: ")
     clean_data(user_file)
+
 
