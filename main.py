@@ -1,8 +1,17 @@
 from fastapi import FastAPI, UploadFile, File
+from fastapi.middleware.cors import CORSMiddleware
 import pandas as pd
 import io
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.get("/")
 def home():
@@ -20,6 +29,7 @@ async def clean_data(file: UploadFile = File(...)):
         "summary_report": summary.to_json(),
         "cleaned_data": cleaned_csv
     }
+
 
 
 
