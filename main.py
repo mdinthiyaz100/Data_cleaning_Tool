@@ -1,5 +1,6 @@
 from fastapi import FastAPI, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import StreamingResponse
 import pandas as pd
 import io
 
@@ -21,17 +22,15 @@ def home():
 async def clean_data(file: UploadFile = File(...)):
     contents = await file.read()
     df = pd.read_csv(io.BytesIO(contents))
+
     df = df.drop_duplicates()
     df = df.dropna()
-    summary = df.describe(include='all')
-    cleaned_csv = df.to_csv(index=False)
-    return {
-        "summary_report": summary.to_json(),
-        "cleaned_data": cleaned_csv
-    }
 
+    cleaned_csv = df.to_csv(index=False).encode('utf-8')
+    output = io.BytesIO(cleaned_csv)
 
-
-
-
-
+    return StreamingResponse(
+        output,
+        media_type="text/csv",
+        headers={"Content-Disposition": "attachment; filename=cleaned_data.csv"}
+    )
